@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G TECH MASH ACADEMY</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; scroll-behavior: smooth; }
+
+    /* Navbar */
+    header {
+      background: #001f3f;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img { height: 50px; }
+    header .btn {
+      background: #0074d9;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      height: 90vh;
+      background: url("assets/flyer.png") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-text {
+      position: relative;
+      text-align: center;
+      color: white;
+      z-index: 2;
+    }
+    .hero-text h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero-text p { font-size: 1.2rem; margin-bottom: 20px; }
+    .hero-text .btn { padding: 12px 24px; font-size: 1rem; }
+
+    /* Scholarship Section */
+    .scholarship {
+      padding: 60px 20px;
+      text-align: center;
+      background: #111;
+    }
+    .scholarship h2 { color: #00aced; margin-bottom: 20px; font-size: 1.8rem; }
+
+    /* Courses Section */
+    .courses {
+      padding: 60px 20px;
+      background: #000;
+      text-align: center;
+    }
+    .courses h2 { margin-bottom: 30px; }
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .course-item {
+      background: #001f3f;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    /* Form Section */
+    .form-section {
+      padding: 60px 20px;
+      background: #111;
+      text-align: center;
+    }
+    .form-section form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-section input, .form-section textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+    }
+    .form-section button {
+      padding: 12px;
+      background: #0074d9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: #001f3f;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <img src="assets/gtm-logo.png" alt="GTM Logo">
+    <a href="#apply" class="btn">Apply Now</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to GTM Academy</h1>
+      <p>Empowering you with skills for the future</p>
+      <a href="#apply" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- Scholarship Announcement -->
+  <section class="scholarship">
+    <h2>Apply Now for Our Next Bootcamp & Win a Scholarship Award!</h2>
+    <p>
+      We’re excited to announce a limited-time opportunity for aspiring tech enthusiasts! 🌟 
+      Our generous sponsors, expert tutors, and dedicated team at <b>GTM Academy</b> are offering a chance to kickstart your tech journey with a 
+      <b>20 Million Worth of Scholarship</b> that can cover up to <b>90%-99%</b> of your training costs! 💸
+    </p>
+    <p><b>Don't miss out on this game-changing opportunity!!!</b></p>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-item">Cybersecurity</div>
+      <div class="course-item">Cloud Computing</div>
+      <div class="course-item">Data Analytics</div>
+      <div class="course-item">Generative AI</div>
+    </div>
+  </section>
+
+  <!-- Apply Form -->
+  <section id="apply" class="form-section">
+    <h2>Apply Now</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 G TECH MASH ACADEMY | Contact: +234XXXXXXXXXX (WhatsApp)</p>
+  </footer>
+</body>
+</html>
